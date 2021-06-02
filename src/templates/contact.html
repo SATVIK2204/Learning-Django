@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Contacts</h1>
+
+<p>
+    {{my_text|upper}}</br>
+    {{my_number}}
+    {{my_html|safe}}
+    {{my_html|striptags}}</br>
+    {{my_html|striptags|slugify}}
+     <ul>
+        {% for my_sub in my_list %}
+            {% if my_sub == "Abc" %}
+                <li>{{forloop.counter}}-{{112}}</li>
+            {% else %}
+                <li>{{forloop.counter}}-{{my_sub}}</li>
+            {% endif %}
+            
+        {% endfor %}
+     </ul>
+    
+</p>
+
+
+{% endblock %}
